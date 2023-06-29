@@ -22,3 +22,14 @@ export const findProducts = async(keyWord) => {
         console.log(error);
     }
 }
+
+export const getOneProduct = async (url, id) => {
+    try {
+        const {data, status} = await axios.get(`${url}/${id}`)
+        if (status === 200) {
+            return data
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}

@@ -110,6 +110,7 @@
                 padding: 1rem;
                 border: 1px solid $color-cerulan;
                 border-radius: 5px;
+                height: fit-content;
     
                 img {
                     width: 10rem;
@@ -136,7 +137,57 @@
                     color: $color-cerulan;
                     margin-bottom: 0.5rem;
                 }
+                .products-container--actions {
+                    display: flex;
+                    gap: 5px;
+                    justify-content: flex-end;
+                    padding: 3px;
+                    svg {
+                        cursor: pointer;
+                    }
+                }
             }
+        }
+    }
+}
+.inactive {
+    display: none;
+}
+#edit-product {
+    padding: 2rem;
+    border: 1px solid $color-cerulan;
+    border-radius: 10px;
+    background-color: $color-cerulan;
+    margin: 20px 0 20px 20px;
+    text-align: left;
+
+    label {
+        color: white;
+        font-size: 20px;
+    }
+
+    input {
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        margin: 0.7rem 0;
+    }
+
+    button {
+        padding:  0.5rem 1.5rem;
+        background-color: white;
+        color: $color-cerulan;
+        align-self: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 1rem;
+        margin: 1rem 0;
+
+        &:hover {
+            background-color: #76bfd3d2;
+            color: white;
         }
     }
 }

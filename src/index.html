@@ -28,6 +28,16 @@
     <h3 id="title" class="hidden">Bienvenido/a <span></span></h3>
     <main class="main">
         <aside class="main__categories">
+            <form class="inactive" id="edit-product">
+                <label for="">Editar producto</label>
+                <input class="form__input" type="text" id="name" placeholder="Nombre" />
+                <input class="form__input" type="number" id="price" placeholder="Precio" />
+                <input class="form__input" type="number" id="amount" placeholder="Cantidad" />
+                <input class="form__input" type="url" id="imageUrl" placeholder="URL de la imagen del producto" />
+                <input class="form__input" type="number" id="category" placeholder="CategoryId" />
+                <div class="form__divButtons">
+                <button class="form__button form__button--signup" id="signup" type="submit">Modificar</button>
+            </form>
             <h2>Categorias</h2>
             <ul class="main__categories__list" id="listCategories">
             </ul>
