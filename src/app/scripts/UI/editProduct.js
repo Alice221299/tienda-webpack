@@ -1,8 +1,6 @@
 import { editProduct } from "../services/product.js";
 
 
-const URL_users = "https://back-whatsapp.onrender.com/";
-
 export const editOneProduct = async (form, id) => {
     form.addEventListener("submit", async (e) => {
         e.preventDefault()
@@ -20,7 +18,7 @@ export const editOneProduct = async (form, id) => {
             imageURL: inputImage.value
         }
         console.log(editedInfo);
-        const URL = "http://localhost:5000/products"
+        const URL = "https://mini-backend-tienda.onrender.com/products"
         await editProduct(URL, id, editedInfo)
         location.reload();
     });

@@ -1,4 +1,4 @@
-import { checkUser, clearSession } from "../services/session"
+import { checkUser, clearSession } from "../services/session.js"
 import { loginBtn, title } from "./domElements"
 import { showLogin } from "./loginView"
 

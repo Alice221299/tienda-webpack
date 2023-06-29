@@ -8,7 +8,7 @@ export const deleteOneProduct = () => {
             if (isDelete) {
               const idProduct = e.target.getAttribute("data-id");
               console.log(idProduct);
-              const URL = "http://localhost:5000/products"
+              const URL = "https://mini-backend-tienda.onrender.com/products"
                 await deleteProduct(URL, idProduct);
                 location.reload();
             }

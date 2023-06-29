@@ -1,4 +1,4 @@
-const URL_API = "http://localhost:5000/"
+const URL_API = "https://mini-backend-tienda.onrender.com/"
 
 export const endpoints = {
     urlProducts: `${URL_API}products?_expand=category`,

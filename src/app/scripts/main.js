@@ -8,6 +8,7 @@ import { verifySession } from './UI/shop.js'
 import { deleteOneProduct } from './UI/deleteProduct.js'
 import { editOneProduct } from './UI/editProduct.js'
 import { getOneProduct } from './services/products.js'
+import { checkUser } from './services/session.js'
 const currentView = localStorage.getItem('currentView')
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,12 +36,17 @@ shopReturn()
 verifySession()
 inputSearch.addEventListener('keyup', printProductsFinder)
 
-deleteOneProduct()
 
-document.addEventListener("click", async (e) => { 
+const user = checkUser()
+if (user) {
+    document.addEventListener("click", async (e) => { 
     if (e.target.classList.contains('edit')) { 
         const idProduct = e.target.getAttribute("data-id");
 
         form.classList.toggle('inactive')
         editOneProduct(form, idProduct)
             }})
+deleteOneProduct()
+        }
+
+
